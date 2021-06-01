@@ -7,6 +7,7 @@
 
 <section id="locations">
   <% @snack.machines.each do |machine| %>
-    <p>* <%= "#{machine.location}" %></p>
+    <h4>* <%= "#{machine.location}" %></h4>
+    <p><%= "#{machine.snack_quantity} kind of snacks, with an average price of $#{machine.average_snack_price.round(2)}" %></p>
   <% end %>
 </section>

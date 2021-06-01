@@ -7,4 +7,8 @@ class Machine < ApplicationRecord
   def average_snack_price
     self.snacks.average(:price)
   end
+
+  def snack_quantity
+    self.snacks.distinct.count
+  end
 end
